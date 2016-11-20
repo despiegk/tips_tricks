@@ -25,7 +25,16 @@ client -r 94.23.38.89:4000 -l ":9900" -mode fast2 --key '7454' --parityshard 2
 
 # here we did example of polipo proxy
 
-- [polipo.cfg]
+```
+set -ex
+apt install polipo
+curl https://raw.githubusercontent.com/despiegk/tips/master/polipo > /etc/polipo/config
+cd /etc/polipo
+polipo -c config
+```
+
+- on port 9900
+- now configure web proxy as localhost:9900
 
 # to test performance
 
