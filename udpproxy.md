@@ -12,7 +12,9 @@ go get github.com/xtaci/kcptun/server
 ## on example server
 
 ```
+cd /optvar/go/bin
 server -t "localhost:9900"  -l ":4000" -mode fast2 --key '7454' --parityshard 2
+ufw allow 4000/udp
 ```
 
 ## on example client
@@ -28,6 +30,7 @@ client -r 94.23.38.89:4000 -l ":9900" -mode fast2 --key '7454' --parityshard 2
 ```
 set -ex
 apt install polipo
+mkdir -p /etc/polipo
 curl https://raw.githubusercontent.com/despiegk/tips/master/polipo > /etc/polipo/config
 cd /etc/polipo
 polipo -c config
