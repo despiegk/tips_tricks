@@ -11,4 +11,6 @@ gpg --send-keys --keyserver pgp.uni-mainz.de 57685726
 gpg --send-keys --keyserver hkps.pool.sks-keyservers.net 57685726
 ```
 
-- how to sign git commits see: https://help.github.com/articles/telling-git-about-your-gpg-key/
+- how to sign git commits see: 
+  - https://help.github.com/articles/telling-git-about-your-gpg-key/
+  - https://help.github.com/articles/signing-commits-using-gpg/
