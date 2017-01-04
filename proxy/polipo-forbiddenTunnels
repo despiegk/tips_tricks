@@ -1,0 +1,23 @@
+# simple case, exact match of hostnames
+ www.massfuel.com
+ # match hostname against regexp
+ \.hitbox\.
+ # match hostname and port against regexp
+ # this will block tunnels to example.com but also  www.example.com
+ # for ports in the range 600-999
+ # Also watch for effects of ’tunnelAllowedPorts’
+ example.com\:[6-9][0-9][0-9]
+ # random examples
+ \.liveperson\.
+ \.atdmt\.com
+ .*doubleclick\.net
+ .*webtrekk\.de
+ ^count\..*
+ .*\.offerstrategy\.com
+ .*\.ivwbox\.de
+ .*adwords.*
+ .*\.sitestat\.com
+ \.xiti\.com
+ webtrekk\..*
+ .*update.*
+ 

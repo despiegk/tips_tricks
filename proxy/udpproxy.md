@@ -25,10 +25,9 @@ client -r 94.23.38.89:4000 -l ":9900" -mode fast2 --key '7454' --parityshard 2
 - 94.23.38.89 is the server addr where the proxy is hosted
 - 4000 is the udp port on the server (make sure no firewall is blocking it)
 
-# here we did example of polipo proxy
+# example with polipo proxy on server
 
 ```
-set -ex
 apt install polipo
 mkdir -p /etc/polipo
 curl https://raw.githubusercontent.com/despiegk/tips/master/polipo > /etc/polipo/config
@@ -43,3 +42,15 @@ polipo -c config
 
 - fast.com
 - http://www.speedtest.net/nl/
+
+# to also use client side proxy
+
+#will go to master polipo server over the udp tunnel
+```
+mkdir -p /tmp/polipo_cache
+curl https://raw.githubusercontent.com/despiegk/tips/master/polipo_client > ~/.config/polipo
+polipo -c ~/.config/polipo
+```
+
+to see webinterface: http://localhost:8123/polipo/
+http://localhost:8123/polipo/status?
